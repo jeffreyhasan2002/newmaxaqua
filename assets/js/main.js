@@ -8,12 +8,22 @@
 		$('#preloader').delay(0).fadeOut();
 	};
 
-	$(window).on('load', function () {
+	var isLoaded = false;
+	function initScripts() {
+		if (isLoaded) return;
+		isLoaded = true;
 		preloader();
 		mainSlider();
 		wowAnimation();
 		aosAnimation();
-		tg_title_animation();
+		if (typeof tg_title_animation === 'function') {
+			tg_title_animation();
+		}
+	}
+
+	$(window).on('load', initScripts);
+	$(document).ready(function() {
+		setTimeout(initScripts, 400);
 	});
 
 
