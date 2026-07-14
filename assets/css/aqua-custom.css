@@ -1,0 +1,402 @@
+/*=============================
+    New Max Aqua — custom overrides
+    (built on top of the template design system)
+===============================*/
+
+html {
+	scroll-behavior: smooth;
+}
+section[id] {
+	scroll-margin-top: 90px;
+}
+
+/* logo sizing (square brand mark) */
+.logo, .logo a {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+.logo img {
+	max-height: 55px;
+}
+.mobile-menu .nav-logo, .mobile-menu .nav-logo a {
+	display: flex;
+	align-items: center;
+}
+.mobile-menu .nav-logo img {
+	max-height: 45px;
+	width: auto !important;
+}
+#preloader .loader-icon img {
+	max-width: 110px;
+	animation: aqua-pulse 1.1s ease-in-out infinite alternate;
+}
+@keyframes aqua-pulse {
+	from { transform: scale(.9); opacity: .75; }
+	to { transform: scale(1.05); opacity: 1; }
+}
+
+/* font-awesome icons inside template icon slots */
+.services-content-top .icon i {
+	font-size: 22px;
+}
+.counter-item .icon i {
+	font-size: 46px;
+	color: var(--tg-secondary-color);
+	line-height: 1;
+}
+
+/* about images */
+.about-img-wrap img:nth-child(1) {
+	width: 100%;
+	height: 650px;
+	object-fit: cover;
+}
+.about-img-wrap img:nth-child(2) {
+	object-fit: cover;
+	background: var(--tg-white);
+	box-shadow: 0 10px 40px rgba(0, 0, 0, .08);
+	bottom: -50px !important;
+}
+.about-content .contact.mb-20 {
+	margin-bottom: 20px;
+}
+
+/* why choose / before-after */
+.why-choose-area {
+	background: var(--tg-section-background);
+}
+.why-choose-img {
+	margin-bottom: 30px;
+}
+.why-choose-img img {
+	width: 100%;
+	border-radius: 30px;
+}
+@media (min-width: 992px) {
+	.why-choose-img {
+		margin-left: 40px;
+		margin-bottom: 0;
+	}
+}
+
+/* icon check lists */
+.aqua-list {
+	margin: 0 0 40px;
+	padding: 0;
+	list-style: none;
+}
+.aqua-list li {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	margin-bottom: 13px;
+	font-weight: 500;
+	color: var(--tg-heading-font-color);
+}
+.aqua-list li i {
+	color: var(--tg-secondary-color);
+	margin-top: 7px;
+	flex: 0 0 auto;
+}
+
+/* vessel cards (built on team cards) */
+.vessel-card .team-thumb {
+	background: var(--tg-blue-two);
+	border-radius: 30px;
+	padding: 30px 20px 45px;
+}
+.vessel-card .team-thumb img {
+	width: 100%;
+	height: 230px;
+	object-fit: contain;
+	border-radius: 0;
+	transition: .3s ease-in-out;
+}
+.vessel-card:hover .team-thumb img {
+	transform: translateY(-6px);
+}
+.vessel-card .team-content {
+	margin: -42px 12px 0;
+	padding: 14px 10px;
+}
+.vessel-card .team-content .title {
+	font-size: 20px;
+}
+
+/* product cards (built on project cards) */
+.product-card .project-thumb {
+	background: var(--tg-white);
+}
+.product-card .project-thumb img {
+	height: 300px;
+	object-fit: contain;
+	padding: 30px 30px 15px;
+}
+.product-card .project-content {
+	border-top: 1px solid #EEF3F9;
+}
+.product-card .project-content span {
+	color: var(--tg-primary-color);
+	font-weight: 600;
+}
+.price-note {
+	color: rgba(255, 255, 255, .65);
+	font-size: 14px;
+	margin: 25px 0 0;
+}
+
+/* solar images (mirrored about layout) */
+.solar-img-wrap {
+	position: relative;
+	padding-left: 100px;
+	margin-bottom: 105px;
+}
+.solar-img-wrap img:nth-child(1) {
+	border-radius: 0 90px 90px 0;
+	width: 100%;
+	object-fit: cover;
+}
+.solar-img-wrap img:nth-child(2) {
+	position: absolute;
+	left: 0;
+	bottom: -75px;
+	border-radius: 50%;
+	width: 320px;
+	height: 320px;
+	object-fit: cover;
+	border: 15px solid var(--tg-white);
+	box-shadow: 0 10px 40px rgba(0, 0, 0, .08);
+}
+@media (max-width: 1199.98px) {
+	.solar-img-wrap img:nth-child(2) {
+		width: 240px;
+		height: 240px;
+	}
+}
+@media (max-width: 767.98px) {
+	.solar-img-wrap {
+		padding-left: 40px;
+		margin-bottom: 85px;
+	}
+	.solar-img-wrap img:nth-child(2) {
+		width: 170px;
+		height: 170px;
+		border-width: 8px;
+	}
+}
+
+/* faq image */
+.aqua-faq-img {
+	margin-top: 40px;
+}
+.aqua-faq-img img {
+	width: 100%;
+	max-width: 100%;
+	margin-left: 0;
+	border-radius: 30px;
+}
+@media (min-width: 992px) {
+	.aqua-faq-img {
+		margin-top: 0;
+		padding-left: 45px;
+	}
+}
+
+/* EMI notes */
+.emi-note {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-top: 35px;
+}
+.emi-note img {
+	height: 38px;
+	background: var(--tg-white);
+	border-radius: 8px;
+	padding: 6px 12px;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+}
+.emi-note p {
+	margin: 0;
+	font-weight: 500;
+	color: var(--tg-heading-font-color);
+}
+.footer-emi img {
+	height: 42px;
+	background: #fff;
+	border-radius: 8px;
+	padding: 8px 14px;
+	margin-top: 5px;
+}
+
+/* floating whatsapp button */
+.whatsapp-float {
+	position: fixed;
+	left: 25px;
+	bottom: 25px;
+	z-index: 999;
+	width: 58px;
+	height: 58px;
+	border-radius: 50%;
+	background-color: #25d366;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 35px;
+	box-shadow: 0 6px 22px rgba(0, 0, 0, .28);
+	transition: transform .3s ease-in-out;
+}
+.whatsapp-float:hover {
+	transform: scale(1.1);
+	color: #fff;
+}
+
+/* Contact info item tweaks */
+.contact-info-item {
+	height: 100%;
+}
+.text-wrap-break {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	word-break: break-all;
+	white-space: normal;
+}
+
+/* Green filters section */
+.green-filter-card .team-thumb {
+	background: var(--tg-white);
+	border-radius: 30px;
+	padding: 20px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
+	margin-bottom: 30px;
+	transition: .3s ease-in-out;
+}
+.green-filter-card .team-thumb img {
+	width: 100%;
+	height: 220px;
+	object-fit: contain;
+	transition: transform .3s ease;
+}
+.green-filter-card:hover .team-thumb {
+	box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+	transform: translateY(-8px);
+}
+.green-filter-card:hover .team-thumb img {
+	transform: scale(1.05);
+}
+
+/* Footer typography fixes */
+.footer-contact .phone-addess a,
+.footer-contact .email-addess a,
+.footer-contact .phone-addess {
+	font-size: 14px !important;
+	line-height: 1.4 !important;
+	font-weight: 500 !important;
+}
+.footer-contact ul.list-wrap li {
+	margin-bottom: 12px;
+}
+
+/* Contact form visibility */
+.contact-inner {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e5;
+}
+
+/* Mobile responsive text */
+@media (max-width: 767.98px) {
+    body p, body li, body a, .content {
+        font-size: 14px;
+    }
+    .about-content .contact a {
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+    }
+    .about-content .contact .icon {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 15px !important;
+    }
+    .footer-contact .list-wrap .phone-addess a {
+        font-size: 16px !important;
+    }
+    .counter-inner {
+        padding: 40px 20px 20px 20px !important;
+        border-radius: 20px !important;
+    }
+    .counter-item {
+        margin-bottom: 25px !important;
+    }
+    .slider-btn {
+        margin-bottom: 40px !important;
+    }
+}
+
+/* Fix Purifier Models Badge Visibility */
+.year-experience-wrap {
+    right: 20px !important;
+    z-index: 10;
+}
+
+@media (max-width: 767.98px) {
+    .year-experience-wrap {
+        display: flex !important;
+        right: auto !important;
+        left: 20px !important;
+        top: 20px !important;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 10px 15px !important;
+        border-radius: 15px;
+        flex-direction: row !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .year-experience-wrap > span {
+        margin-bottom: 0 !important;
+        font-size: 32px !important;
+    }
+    .year-experience-wrap p {
+        transform: none !important;
+        text-align: left !important;
+        margin-top: 0 !important;
+        margin-left: 10px !important;
+        font-size: 16px !important;
+        color: var(--tg-primary-color) !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+    }
+    .year-experience-wrap p span {
+        display: inline !important;
+    }
+}
+
+/* Footer email alignment and circle icon */
+.footer-contact .list-wrap .email-addess {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer-contact .list-wrap .email-addess i {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tg-secondary-color);
+    color: var(--tg-white);
+    border-radius: 50%;
+    font-size: 14px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+.footer-contact .list-wrap .email-addess a {
+    display: block;
+    font-size: 16px;
+    color: var(--tg-white);
+    line-height: 1.4;
+    word-break: break-all;
+}
