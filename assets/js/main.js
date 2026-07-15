@@ -524,7 +524,10 @@
 			spaceBetween: 30,
 			loop: true,
 			loopedSlides: 16,
-			autoplay: false,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 			breakpoints: {
 				500: {
 					slidesPerView: 2,
