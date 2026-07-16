@@ -1312,39 +1312,40 @@
                                     Test
                                 </h2>
                             </div>
-                            <form action="#">
+                            <script type="text/javascript">var submitted=false;</script>
+                            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {alert('Thank you for your message! We will get back to you shortly.'); window.location.reload();}"></iframe>
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLScZU5A9QSFHB5eUe5rAfdEutXEPmmQcNqDx3SRI72naubd6SA/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-grp">
-                                            <input type="text" placeholder="Full name">
+                                            <input type="text" name="entry.7538804" placeholder="Full name" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-grp">
-                                            <input type="text" placeholder="Your email">
+                                            <input type="email" name="entry.1571859900" placeholder="Your email" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-grp">
-                                            <input type="text" placeholder="Phone number">
+                                            <input type="text" name="entry.2139985795" placeholder="Phone number" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-grp">
-                                            <select id="shortBy" name="select" class="form-select"
-                                                aria-label="Select service">
+                                            <select name="entry.806731782" class="form-select" aria-label="Select service" required>
                                                 <option value="">Select Service</option>
-                                                <option>Water Purifier — Sales &amp; Installation</option>
-                                                <option>Water Filtration Vessels</option>
-                                                <option>Solar Energy Solutions</option>
-                                                <option>Water Tank Deep Cleaning</option>
-                                                <option>AMC &amp; Maintenance</option>
+                                                <option value="Water Purifier — Sales &amp; Installation">Water Purifier — Sales &amp; Installation</option>
+                                                <option value="Water Filtration Vessels">Water Filtration Vessels</option>
+                                                <option value="Solar Energy Solutions">Solar Energy Solutions</option>
+                                                <option value="Water Tank Deep Cleaning">Water Tank Deep Cleaning</option>
+                                                <option value="AMC &amp; Maintenance">AMC &amp; Maintenance</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-grp">
-                                    <textarea name="message" placeholder="Write message"></textarea>
+                                    <textarea name="entry.1959980234" placeholder="Write message"></textarea>
                                 </div>
                                 <button type="submit" class="btn" style="margin-bottom: 25px;">Send a message</button>
                             </form>
